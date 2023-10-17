@@ -1,4 +1,4 @@
-# Portal-2-VR-installer
+# Portal 2 VR installer
 A tool to install Portal 2 VR
 
 ## Compiling
