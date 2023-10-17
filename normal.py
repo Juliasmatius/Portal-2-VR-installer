@@ -74,3 +74,4 @@ if os.path.exists(os.path.join(portalfolder, "portal2.exe")):
 else:
     print("The folder you chose was invalid.")
     exit()
+    
