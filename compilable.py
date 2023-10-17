@@ -49,6 +49,14 @@ if os.path.exists(os.path.join(portalfolder, "portal2.exe")):
         response = requests.get(download_url)
         open("Portal2VR.zip", "wb").write(response.content)
         print("Installing...")
+        if os.path.exists("C:\\Program Files (x86)\\Steam\\steamapps\\common\\Portal 2\\portal2_dlc3"):
+            print("It seems like you have a portal2_dlc3 folder already exists.")
+            print("This installation will override pak01_dir.vpk, UpdateSoundCache.cmd and _master.cache")
+            stauts = messagebox.askokcancel(title="Override warning!!!!!!", message="It seems like you have a portal2_dlc3 folder already exists.\nThis installation will override pak01_dir.vpk, UpdateSoundCache.cmd and _master.cache")
+            if stauts:
+                pass
+            else:
+                exit()
         with ZipFile('Portal2VR.zip', 'r') as f:
             f.extractall()
         result = messagebox.askyesno("Installation was successful", "Do you want to download and install Mod manager?")
