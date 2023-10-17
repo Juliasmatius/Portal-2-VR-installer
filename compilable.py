@@ -63,7 +63,7 @@ if os.path.exists(os.path.join(portalfolder, "portal2.exe")):
         if result:
             manager_url = download_repo("Juliasmatius/Portal-2-VR-manager")
             print("Downloading...")
-            response = requests.get(download_url)
+            response = requests.get(manager_url)
             open("ModManager.bat", "wb").write(response.content)
             result = messagebox.askyesno("Installation was successful", "Do you want to make a shortcut?")
             if result:
